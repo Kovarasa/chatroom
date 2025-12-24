@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatroom with DMs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h3>Online Users</h3>
+      <ul id="users"></ul>
+    </aside>
+
+    <main id="chat-container">
+      <div id="top">
+        <form id="username-form">
+          <input id="username" autocomplete="off" placeholder="Enter username" />
+          <button type="submit">Join</button>
+        </form>
+        <div id="dm-indicator">Public chat</div>
+      </div>
+
+      <ul id="messages"></ul>
+
+      <form id="form" action="" style="display:none;">
+        <input id="input" autocomplete="off" placeholder="Type a message..." />
+        <button>Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
